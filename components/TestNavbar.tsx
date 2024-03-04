@@ -10,6 +10,7 @@ import {
   } from "framer-motion";
 import { Switch } from "@/components/ui/switch"
 import { useTheme } from "next-themes"
+import { MdLightMode, MdNightlight } from "react-icons/md";
 
 
 export function TestNavbar() {
@@ -75,9 +76,9 @@ function Navbar({ className }: { className?: string }) {
 
 <div className="h-[4rem] w-full bg-black dark:bg-white  bg-grid-white/[0.2] dark:bg-grid-black/[0.2] relative flex items-center justify-center ">
 <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="What is Bitcoin?">
+        <MenuItem setActive={setActive} active={active} item="What is ₿itcoin?">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/1lvl-exp">I LVL Bitcoin</HoveredLink>
+            <HoveredLink href="/1lvl-exp">I LVL ₿itcoin</HoveredLink>
             <HoveredLink href="/2lvl-exp">II LVL Fiat</HoveredLink>
             <HoveredLink href="/3lvl-exp">III LVL Alts</HoveredLink>
             <HoveredLink href="/4lvl-exp">IV LVL CBDCs</HoveredLink>
@@ -131,8 +132,11 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
 
-        <div className="right-10 fixed">
-        <Switch checked={theme === 'dark'} onClick={toggleDarkMode} />        </div>
+        <div className="right-10 fixed flex space-x-1 translate-x-9">
+          <MdLightMode className="text-transparent dark:text-borange transition-all duration-500"/>
+        <Switch checked={theme === 'dark'} onClick={toggleDarkMode} id="dark-mode"/>
+        <MdNightlight className="text-borange dark:text-transparent transition-all duration-500"/>
+        </div>
       </Menu>
 </div>
 
