@@ -41,7 +41,7 @@ export const WavyBackground = ({
       case "slow":
         return 0.001; // Increase the speed for a faster effect
       case "fast":
-        return 0.004; // Increase the speed for a faster effect
+        return 0.008; // Increase the speed for a faster effect
       default:
         return 0.1;
     }
@@ -65,19 +65,19 @@ export const WavyBackground = ({
   const waveColors = colors ?? [
     "#f7931a",
     "#fbb341",
-    "#ffe365",
-    "#d0aa0e",
+    "#ff6a6a",
+    "#a30d0d",
   ];
 
   const drawWave = (n: number) => {
     nt += getSpeed();
     for (i = 0; i < n; i++) {
       ctx.beginPath();
-      ctx.lineWidth = waveWidth || 50;
+      ctx.lineWidth = waveWidth || 70;
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         // Make the waves edgy by multiplying noise with a higher value
-        var y = noise(x / 800, 0.3 * i, nt) * 200;
+        var y = noise(x / 800, 0.3 * i, nt) * 140;
         ctx.lineTo(x, y + h * 0.5); // adjust for height, currently at 50% of the container
       }
       ctx.stroke();

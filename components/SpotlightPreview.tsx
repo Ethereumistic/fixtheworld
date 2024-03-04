@@ -14,7 +14,7 @@ export function SpotlightPreview() {
           Bitcoin</h1> <br /> 
           <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">is the new trend.</h1>
         
-        <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
+        <p className="mt-4 font-normal text-base text-black dark:text-neutral-300 max-w-lg text-center mx-auto">
         Discover the fundamentals of the timechain (blockchain), 
         the backbone of Bitcoin, and understand how it facilitates 
         secure and transparent transactions without the need for 

@@ -41,7 +41,7 @@ export const WavyBackground = ({
       case "slow":
         return 0.001; // Increase the speed for a faster effect
       case "fast":
-        return 0.004; // Increase the speed for a faster effect
+        return 0.01; // Increase the speed for a faster effect
       default:
         return 0.1;
     }
@@ -64,23 +64,21 @@ export const WavyBackground = ({
 
   const waveColors = colors ?? [
     "#f7931a",
-    "#9da7da",
-    "#F80404",
-    "#1df1a4",
-    "#6aa7ff",
-    "#833adc"
+    "#fbb341",
+    "#ffe365",
+    "#d0aa0e",
   ];
 
   const drawWave = (n: number) => {
     nt += getSpeed();
     for (i = 0; i < n; i++) {
       ctx.beginPath();
-      ctx.lineWidth = waveWidth || 50;
+      ctx.lineWidth = waveWidth || 100;
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         // Make the waves edgy by multiplying noise with a higher value
-        var y = noise(x / 800, 0.3 * i, nt) * 500;
-        ctx.lineTo(x, y + h * 0.3); // adjust for height, currently at 50% of the container
+        var y = noise(x / 800, 0.3 * i, nt) * 100;
+        ctx.lineTo(x, y + h * 0.5); // adjust for height, currently at 50% of the container
       }
       ctx.stroke();
       ctx.closePath();
@@ -94,7 +92,7 @@ export const WavyBackground = ({
     ctx.fillStyle = backgroundFill || "transparent";
     ctx.fillRect(0, 0, w, h);
     ctx.globalAlpha = waveOpacity || 0.5;
-    drawWave(6);
+    drawWave(4);
     ctx.globalAlpha = 1; // Reset global alpha after drawing waves
     animationId = requestAnimationFrame(render);
   };
@@ -122,7 +120,7 @@ export const WavyBackground = ({
 
     <div
       className={cn(
-        "h-screen flex flex-col items-center justify-center  mb-36 ",
+        "h-screen flex flex-col items-center justify-center  mb-36",
         containerClassName
       )}
     >

@@ -8,6 +8,9 @@ import {
     useScroll,
     useMotionValueEvent,
   } from "framer-motion";
+import { Switch } from "@/components/ui/switch"
+import { useTheme } from "next-themes"
+
 
 export function TestNavbar() {
 
@@ -21,6 +24,12 @@ export function TestNavbar() {
 }
 
 function Navbar({ className }: { className?: string }) {
+  const { theme, setTheme } = useTheme();
+  
+  const toggleDarkMode = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   const [active, setActive] = useState<string | null>(null);
 
   const { scrollYProgress } = useScroll();
@@ -45,10 +54,10 @@ function Navbar({ className }: { className?: string }) {
       <motion.div
         initial={{
           opacity: 1,
-          y: -100,
+          // y: -100,
         }}
         animate={{
-          y: visible ? 0 : -100,
+          // y: visible ? 0 : -100,
           opacity: visible ? 1 : 0,
         }}
         transition={{
@@ -61,23 +70,23 @@ function Navbar({ className }: { className?: string }) {
       >
 
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-[896px] mx-auto z-50 translate-x-2", className)}
+      className={cn("fixed top-10 inset-x-0 max-w-[896px] mx-auto z-50 translate-x-2 ", className)}
     >
 
-<div className="h-[4rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+<div className="h-[4rem] w-full bg-black dark:bg-white  bg-grid-white/[0.2] dark:bg-grid-black/[0.2] relative flex items-center justify-center ">
 <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="What is Bitcoin?">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/1lvl-exp">1 LVL Explanation</HoveredLink>
-            <HoveredLink href="/2lvl-exp">2 LVL</HoveredLink>
-            <HoveredLink href="/3lvl-exp">3 LVL</HoveredLink>
-            <HoveredLink href="/4lvl-exp">4 LVL</HoveredLink>
-            <HoveredLink href="/5lvl-exp">5 LVL</HoveredLink>
-
+            <HoveredLink href="/1lvl-exp">I LVL Bitcoin</HoveredLink>
+            <HoveredLink href="/2lvl-exp">II LVL Fiat</HoveredLink>
+            <HoveredLink href="/3lvl-exp">III LVL Alts</HoveredLink>
+            <HoveredLink href="/4lvl-exp">IV LVL CBDCs</HoveredLink>
+            <HoveredLink href="/5lvl-exp">V LVL War</HoveredLink>
+            <HoveredLink href="/6lvl-exp">VI LVL Time</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+          <div className="  text-sm grid grid-cols-2 gap-10 p-4 dark:text-white text-black">
             <ProductItem
               title="Algochurn"
               href="https://algochurn.com"
@@ -122,7 +131,8 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
 
-        
+        <div className="right-10 fixed">
+        <Switch checked={theme === 'dark'} onClick={toggleDarkMode} />        </div>
       </Menu>
 </div>
 

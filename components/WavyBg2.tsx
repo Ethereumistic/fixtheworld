@@ -37,14 +37,14 @@ const words = [
   },
   {
     text: "centralized",
-    className: "text-tgreen"
+    className: "text-tgreen dark:text-tgreen"
   },
   {
     text: "&",
   },
   {
     text: "decentralized",
-    className: "text-borange"
+    className: "text-borange dark:text-borange"
   },
   {
     text: "and",
@@ -66,7 +66,7 @@ const words = [
   },
   {
     text: "Bitcoin.",
-    className: "text-borange text-xl"
+    className: "text-borange text-xl dark:text-borange"
   },
 ];
 
@@ -74,7 +74,7 @@ export function WavyBg2() {
   return (
     <WavyBackground className=" mx-auto pb-40 ">
       <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center">
-        Bitcoin <span className="text-white">vs</span> <span className="text-tgreen">Fiat</span>
+        Bitcoin <span className="text-black dark:text-white">vs</span> <span className="text-tgreen">Fiat</span>
       </p>
       {/* <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
       Level 2: Exploring the characteristics of both types of currencies centralized & decentralized and highlights the unique features of Bitcoin.

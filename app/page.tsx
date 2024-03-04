@@ -8,7 +8,7 @@ export default function Home() {
     <div>
 
     {/* 1st grid */}
-    <div className="h-[1088px] w-full bg-black dark:bg-white  bg-grid-white/[0.2] dark:bg-grid-black/[0.2] relative flex items-center justify-center">
+    <div className="h-[1088px] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
       <div>
         <SpotlightPreview />
         <div className="-translate-y-36">
@@ -18,7 +18,7 @@ export default function Home() {
     </div>
 
     {/* 2nd grid */}
-    <div className="h-[1088px] w-full bg-black dark:bg-white  bg-grid-white/[0.2] dark:bg-grid-black/[0.2] relative flex justify-center">
+    <div className="h-[1088px] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex justify-center">
       
 
 

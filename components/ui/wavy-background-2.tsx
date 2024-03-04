@@ -41,7 +41,7 @@ export const WavyBackground = ({
       case "slow":
         return 0.001; // Increase the speed for a faster effect
       case "fast":
-        return 0.004; // Increase the speed for a faster effect
+        return 0.002; // Increase the speed for a faster effect
       default:
         return 0.1;
     }
