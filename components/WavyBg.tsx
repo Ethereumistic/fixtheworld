@@ -13,8 +13,8 @@ export function WavyBg() {
       text: "1:",
     },
     {
-      text: "Bitcoin",
-      className: "text-borange dark:text-borange"
+      text: "₿itcoin",
+      className: "text-borange dark:text-borange text-xl"
     },
     {
       text: "Basics",
@@ -38,8 +38,8 @@ export function WavyBg() {
       text: "of",
     },
     {
-      text: "Bitcoin",
-      className: "text-borange dark:text-borange",
+      text: "₿itcoin",
+      className: "text-borange dark:text-borange text-xl",
     },
     {
       text: "in",

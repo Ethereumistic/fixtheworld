@@ -95,7 +95,9 @@ export function MeteorsDemo() {
                     <div className="flex-row flex items-center justify-between">
 
                         <HoverInfo id={7}/>
+                        <p className="text-white">
                         {marketCapRatio}
+                        </p>
                         </div>
                     </AccordionContent>
             </AccordionItem>
@@ -140,10 +142,6 @@ export function MeteorsDemo() {
           </div>
         </div>
           
-
-          <button className="border px-4 py-1 mt-1 rounded-lg  border-gray-500 text-gray-300">
-            Explore
-          </button>
 
           {/* Meaty part - Meteor effect */}
           <Meteors number={21} />
