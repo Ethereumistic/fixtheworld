@@ -21,7 +21,7 @@ const FlvlExp = () => {
         <div className='-translate-x-[188px] translate-y-[10px]'>
           <CardHoverEffectDemo />
         </div>
-        <div className='translate-y-[68px]'>
+        <div className='translate-y-[14px]'>
           <MeteorsDemo />
         </div>
       </div>
