@@ -11,6 +11,7 @@ import {
 import { Switch } from "@/components/ui/switch"
 import { useTheme } from "next-themes"
 import { MdLightMode, MdNightlight } from "react-icons/md";
+import Link from "next/link";
 
 
 export function TestNavbar() {
@@ -114,15 +115,18 @@ function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
-
-        <MenuItem setActive={setActive} active={active} item="Pricing">
+        <Link href="/dictionary">
+        <MenuItem setActive={setActive} active={active} item="Dictionary">
+          
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            <HoveredLink href="/hobby">Bitcoin</HoveredLink>
+            <HoveredLink href="/individual">Fiat</HoveredLink>
+            <HoveredLink href="/team">Economics</HoveredLink>
+            <HoveredLink href="/enterprise">Math</HoveredLink>
+            <HoveredLink href="/enterprise">Physics</HoveredLink>
           </div>
         </MenuItem>
+        </Link>
 
         <MenuItem setActive={setActive} active={active} item="Wallets">
           <div className="flex flex-col space-y-4 text-sm">
