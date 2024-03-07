@@ -86,7 +86,7 @@ export function DataTable<TData, TValue>({
         {/* Tova e visibility dropdown menuto */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto text-black dark:text-white">
+            <Button variant="outline" className="ml-auto text-black dark:text-white z-20">
               Hide Columns
             </Button>
           </DropdownMenuTrigger>

@@ -14,20 +14,20 @@ import {
 
 // Add this class to your stylesheet or JSX file
 const typeCellStyle = 'text-bgray'
-const termCellStyle = 'text-borange text-xl font-bold'
+const termCellStyle = 'text-tgreen text-xl font-bold'
 const descCellStyle = 'text-white text-xl '; // Customize the styles as needed
 
 
-export type BitcoinTermType = {
+export type FiatTermType = {
   type: "Acronym" | "Word" | "Tech" | "Security" | "Transaction" | "Wallet" | "Market" | "Regulatory" | "Community" | "Misc"
   term: string
   description: string
 }
 
-export const columns: ColumnDef<BitcoinTermType>[] = [
+export const columns: ColumnDef<FiatTermType>[] = [
   {
     accessorKey: "type",
-    header: () => <div className="text-left">Type</div>,
+    header: () => <div className="text-center">Type</div>,
     cell: ({ cell }) => {
       const value = cell.getValue(); // Use getValue() to access the cell value
       return <div className={typeCellStyle}>{value}</div>;

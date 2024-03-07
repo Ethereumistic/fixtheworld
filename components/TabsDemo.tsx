@@ -9,11 +9,11 @@ export function TabsDemo() {
       title: "Bitcoin",
       value: "bitcoin",
       content: (
-        <div className="w-full overflow-hidden relative h-auto border border-borange p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black ">
-          <p className="text-borange -mt-4">Bitcoin</p>
+        <div className="w-full overflow-hidden relative h-auto border border-borange p-10 text-xl md:text-4xl font-bold  text-white bg-gradient-to-br bg-black ">
+          <p className="text-borange -mt-20 -mb-8 mx-auto translate-x-[400px] translate-y-16 z-10">Bitcoin</p>
           <div className="justify-center items-center flex">
             <RenderBitcoin />
-            asd
+            
           </div>
         </div>
       ),
@@ -23,7 +23,7 @@ export function TabsDemo() {
       value: "fiat",
       content: (
         <div className="w-full overflow-hidden relative h-auto border border-tgreen p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black">
-          <p className="text-tgreen -mt-4">Fiat</p>
+          <p className="text-tgreen -mt-20 -mb-8 mx-auto translate-x-[400px] translate-y-16 z-10">Fiat</p>
           <div className="justify-center items-center flex">
             <RenderFiat />
           </div>
