@@ -18,26 +18,34 @@ const termCellStyle = 'text-tgreen text-xl font-bold'
 const descCellStyle = 'text-white text-xl '; // Customize the styles as needed
 
 
-export type FiatTermType = {
+export type BitcoinTermType = {
   type: "Acronym" | "Word" | "Tech" | "Security" | "Transaction" | "Wallet" | "Market" | "Regulatory" | "Community" | "Misc"
   term: string
   description: string
 }
 
-export const columns: ColumnDef<FiatTermType>[] = [
+export const columns: ColumnDef<BitcoinTermType>[] = [
   {
     accessorKey: "type",
-    header: () => <div className="text-center">Type</div>,
+    header: () => <div className="text-left">Type</div>,
     cell: ({ cell }) => {
       const value = cell.getValue(); // Use getValue() to access the cell value
-      return <div className={typeCellStyle}>{value}</div>;
+
+      // Ensure value is always a string before rendering
+      const termString = (typeof value === 'string') ? value : '';
+
+      return <div className={typeCellStyle}>{termString}</div>;
     },
   },
   {
     accessorKey: "term",
     cell: ({ cell }) => {
       const value = cell.getValue(); // Use getValue() to access the cell value
-      return <div className={termCellStyle}>{value}</div>;
+
+      // Ensure value is always a string before rendering
+      const termString = (typeof value === 'string') ? value : '';
+
+      return <div className={termCellStyle}>{termString}</div>;
     },
     header: ({ column }) => {
       return (
@@ -60,7 +68,11 @@ export const columns: ColumnDef<FiatTermType>[] = [
     header: () => <div className="text-center">Description</div>,
     cell: ({ cell }) => {
       const value = cell.getValue(); // Use getValue() to access the cell value
-      return <div className={descCellStyle}>{value}</div>;
+
+      // Ensure value is always a string before rendering
+      const termString = (typeof value === 'string') ? value : '';
+
+      return <div className={descCellStyle}>{termString}</div>;
     },
   },
 ];
