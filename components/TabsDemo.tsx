@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 import RenderBitcoin from "@/app/dictionary/RenderBitcoin"
-
+import RenderFiat from "@/app/dictionary/RenderFiat"
 export function TabsDemo() {
   const tabs = [
     {
@@ -10,9 +10,10 @@ export function TabsDemo() {
       value: "bitcoin",
       content: (
         <div className="w-full overflow-hidden relative h-auto border border-borange p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black ">
-          <p className="text-borange">Bitcoin</p>
+          <p className="text-borange -mt-4">Bitcoin</p>
           <div className="justify-center items-center flex">
             <RenderBitcoin />
+            asd
           </div>
         </div>
       ),
@@ -21,9 +22,11 @@ export function TabsDemo() {
       title: "Fiat",
       value: "fiat",
       content: (
-        <div className="w-full overflow-hidden relative h-full border border-borange p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black">
-          <p className="text-tgreen">Fiat</p>
-          asdasdasd
+        <div className="w-full overflow-hidden relative h-auto border border-tgreen p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black">
+          <p className="text-tgreen -mt-4">Fiat</p>
+          <div className="justify-center items-center flex">
+            <RenderFiat />
+          </div>
         </div>
       ),
     },
@@ -32,7 +35,7 @@ export function TabsDemo() {
       value: "economics",
       content: (
         <div className="w-full overflow-hidden relative h-full border border-borange p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black">
-          <p className="text-tblue">Economics</p>
+          <p className="text-tblue -mt-4">Economics</p>
           asdasdasd
         </div>
       ),
@@ -42,7 +45,7 @@ export function TabsDemo() {
       value: "math",
       content: (
         <div className="w-full overflow-hidden relative h-full border border-borange p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black">
-          <p className="text-yellow-300">Math</p>
+          <p className="text-yellow-300 -mt-4">Math</p>
           asdasdasd
         </div>
       ),
@@ -52,7 +55,7 @@ export function TabsDemo() {
       value: "physics",
       content: (
         <div className="w-full overflow-hidden relative h-full border border-borange p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br bg-black">
-          <p className="text-red-600">Physics</p>
+          <p className="text-red-600 -mt-4">Physics</p>
           asdasdasd
         </div>
       ),

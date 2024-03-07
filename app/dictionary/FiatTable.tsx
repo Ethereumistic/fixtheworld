@@ -86,7 +86,7 @@ export function DataTable<TData, TValue>({
         {/* Tova e visibility dropdown menuto */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto text-black dark:text-white">
+            <Button variant="outline" className="ml-auto">
               Hide Columns
             </Button>
           </DropdownMenuTrigger>
@@ -114,7 +114,7 @@ export function DataTable<TData, TValue>({
         </DropdownMenu>    
       </div>
 
-    <div className="border border-borange">
+    <div className="border border-tgreen">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

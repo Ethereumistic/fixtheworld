@@ -1,5 +1,5 @@
 import { BitcoinTermType, columns } from "./bitcoinColumns"
-import { DataTable } from "./BitcoinTable"
+import { DataTable } from "./FiatTable"
 
 async function getData(): Promise<BitcoinTermType[]> {
     // Fetch data from your API here.
