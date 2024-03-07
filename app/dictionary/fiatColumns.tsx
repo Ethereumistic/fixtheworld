@@ -18,13 +18,13 @@ const termCellStyle = 'text-tgreen text-xl font-bold'
 const descCellStyle = 'text-white text-xl '; // Customize the styles as needed
 
 
-export type BitcoinTermType = {
+export type FiatTermType = {
   type: "Acronym" | "Word" | "Tech" | "Security" | "Transaction" | "Wallet" | "Market" | "Regulatory" | "Community" | "Misc"
   term: string
   description: string
 }
 
-export const columns: ColumnDef<BitcoinTermType>[] = [
+export const columns: ColumnDef<FiatTermType>[] = [
   {
     accessorKey: "type",
     header: () => <div className="text-left">Type</div>,
