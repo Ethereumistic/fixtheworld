@@ -1,17 +1,30 @@
-import { TextGenerateEffectDemo } from '@/components/TextGenerateEffectDemo'
+"use client";
+import { CardHoverEffectDemo } from '@/components/CardHoverEffectDemo'
+import { CardHoverEffectWhatIsBitcoin } from '@/components/CardHoverEffectWhatIsBitcoin';
+import { MeteorsDemo } from '@/components/MeteorsDemo';
+import { WavyBg } from '@/components/WavyBg'
+import { TracingBeam } from '@/components/ui/tracing-beam'
 import React from 'react'
+import { IoLogoBitcoin } from "react-icons/io5";
 
 const WhatIsBitcoin = () => {
   return (
-    <div className='flex flex-col justify-center items-center'>
-        
-                
-        <div className='text-5xl py-16'> <TextGenerateEffectDemo /></div>
-        <div className='text-5xl py-16'> Hellow xalar yu?</div>
-        <div className='text-5xl py-16'> Hellow xalar yu?</div>
-        <div className='text-5xl py-16'> Hellow xalar yu?</div>
-        <div className='text-5xl py-16'> Hellow xalar yu?</div>
+    <div>
+      <TracingBeam className=''>
+      <div className='mt-32 translate-x-2'>
+      <CardHoverEffectWhatIsBitcoin />
+      </div>
+    
 
+      <div className='flex flex-row justify-center  my-32'>
+        asd
+      </div>
+      <div className='flex flex-row justify-center  my-32'>
+        asd
+      </div>      <div className='flex flex-row justify-center  my-32'>
+        asd
+      </div>
+    </TracingBeam>
     </div>
   )
 }
