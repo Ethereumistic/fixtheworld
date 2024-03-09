@@ -12,7 +12,7 @@ import { Switch } from "@/components/ui/switch"
 import { useTheme } from "next-themes"
 import { MdLightMode, MdNightlight } from "react-icons/md";
 import Link from "next/link";
-
+import { TextGenerateEffectDemo } from "./TextGenerateEffectDemo";
 
 export function TestNavbar() {
 
@@ -26,6 +26,9 @@ export function TestNavbar() {
 }
 
 function Navbar({ className }: { className?: string }) {
+
+
+
   const { theme, setTheme } = useTheme();
   
   const toggleDarkMode = () => {
@@ -51,6 +54,7 @@ function Navbar({ className }: { className?: string }) {
     }
   });
 
+  
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -76,17 +80,23 @@ function Navbar({ className }: { className?: string }) {
     >
 
 <div className="h-[4rem] w-full bg-black dark:bg-white  bg-grid-white/[0.2] dark:bg-grid-black/[0.2] relative flex items-center justify-center ">
-<Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="What is ₿itcoin?">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/1lvl-exp">I LVL ₿itcoin</HoveredLink>
-            <HoveredLink href="/2lvl-exp">II LVL Fiat</HoveredLink>
-            <HoveredLink href="/3lvl-exp">III LVL Alts</HoveredLink>
-            <HoveredLink href="/4lvl-exp">IV LVL CBDCs</HoveredLink>
-            <HoveredLink href="/5lvl-exp">V LVL War</HoveredLink>
-            <HoveredLink href="/6lvl-exp">VI LVL Time</HoveredLink>
+<Menu setActive={setActive} >
+      <Link href="/what-is-bitcoin" className="translate-y-4 w-48 translate-x-20">{<TextGenerateEffectDemo />}
+        <div className="-translate-y-[34px] -translate-x-[70px] "><MenuItem setActive={setActive} active={active} item={"What is"} >
+          <div className="flex flex-col space-y-4 text-sm ">
+            <HoveredLink  href="what-is-bitcoin/1lvl-bitcoin/" as="/what-is-bitcoin/1lvl-bitcoin">I LVL ₿itcoin</HoveredLink>
+            <HoveredLink href="what-is-bitcoin/2lvl-fiat/" as="/what-is-bitcoin/2lvl-fiat">II LVL Fiat</HoveredLink>
+            <HoveredLink href="what-is-bitcoin/3lvl-alts/" as="/what-is-bitcoin/3lvl-alts">III LVL Alts</HoveredLink>
+            <HoveredLink href="what-is-bitcoin/4lvl-cbdcs/" as="/what-is-bitcoin/4lvl-cbdcs">IV LVL CBDCs</HoveredLink>
+            <HoveredLink href="what-is-bitcoin/5lvl-war/" as="/what-is-bitcoin/5lvl-war">V LVL War</HoveredLink>
+            <HoveredLink href="what-is-bitcoin/6lvl-time/" as="/what-is-bitcoin/6lvl-time">VI LVL Time</HoveredLink>
           </div>
         </MenuItem>
+        </div>
+      </Link>
+
+      
+      <div className="translate-y-4">
         <MenuItem setActive={setActive} active={active} item="Products">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4 dark:text-white text-black">
             <ProductItem
@@ -115,19 +125,24 @@ function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
+        </div>
+      
+      <div className="translate-y-4">
         <Link href="/dictionary">
         <MenuItem setActive={setActive} active={active} item="Dictionary">
-          
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Bitcoin</HoveredLink>
-            <HoveredLink href="/individual">Fiat</HoveredLink>
+            <HoveredLink href="/dictionary#Bitcoin" >Bitcoin</HoveredLink>
+            <HoveredLink href="/dictionary#Fiat">Fiat</HoveredLink>
             <HoveredLink href="/team">Economics</HoveredLink>
             <HoveredLink href="/enterprise">Math</HoveredLink>
             <HoveredLink href="/enterprise">Physics</HoveredLink>
           </div>
         </MenuItem>
         </Link>
+      </div>
 
+
+      <div className="translate-y-4 ">
         <MenuItem setActive={setActive} active={active} item="Wallets">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/software">Software</HoveredLink>
@@ -135,8 +150,9 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/diy">DIY</HoveredLink>
           </div>
         </MenuItem>
+      </div>
 
-        <div className="right-10 fixed flex space-x-1 translate-x-9">
+        <div className="right-10 fixed flex space-x-1 translate-x-9 translate-y-5">
           <MdLightMode className="text-transparent dark:text-borange transition-all duration-500"/>
         <Switch checked={theme === 'dark'} onClick={toggleDarkMode} id="dark-mode"/>
         <MdNightlight className="text-borange dark:text-transparent transition-all duration-500"/>

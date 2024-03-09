@@ -65,21 +65,21 @@ const words = [
     text: "of",
   },
   {
-    text: "Bitcoin.",
+    text: "₿itcoin.",
     className: "text-borange text-xl dark:text-borange"
   },
 ];
 
 export function WavyBg2() {
   return (
-    <WavyBackground className=" mx-auto pb-40 ">
-      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center">
-        Bitcoin <span className="text-black dark:text-white">vs</span> <span className="text-tgreen">Fiat</span>
+    <WavyBackground className=" mx-auto ">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center pb-2">
+      ₿itcoin <span className="text-black dark:text-white">vs</span> <span className="text-tgreen">Fiat</span>
       </p>
       {/* <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
       Level 2: Exploring the characteristics of both types of currencies centralized & decentralized and highlights the unique features of Bitcoin.
       </p> */}
-      <TypewriterEffectSmooth words={words} />
+      <TypewriterEffectSmooth words={words} className="mb-[567px]"/>
     </WavyBackground>
   );
 }

@@ -79,7 +79,7 @@ export const WavyBackground = ({
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         // Make the waves edgy by multiplying noise with a higher value
-        var y = noise(x / 800, 0.3 * i, nt) * 500;
+        var y = noise(x / 800, 0.3 * i, nt) * 270;
         ctx.lineTo(x, y + h * 0.3); // adjust for height, currently at 50% of the container
       }
       ctx.stroke();
@@ -122,12 +122,12 @@ export const WavyBackground = ({
 
     <div
       className={cn(
-        "h-screen flex flex-col items-center justify-center  mb-36 ",
+        "h-screen flex flex-col items-center justify-center  mb-0 ",
         containerClassName
       )}
     >
       <canvas
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 mt-48"
         ref={canvasRef}
         id="canvas"
         style={{

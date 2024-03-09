@@ -26,7 +26,7 @@ const words = [
     text: "between",
   },
   {
-    text: "Bitcoin",
+    text: "₿itcoin",
     className: "text-borange dark:text-borange text-xl"
   },
   {
@@ -69,11 +69,11 @@ const words = [
 
 export function WavyBg5() {
   return (
-    <WavyBackground className="mx-auto pb-40">
-      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center">
-        Bitcoin <span className="text-black dark:text-white">&</span> <span className="text-red-600">War</span>
+    <WavyBackground className="mx-auto ">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center pb-1">
+      ₿itcoin <span className="text-black dark:text-white">&</span> <span className="text-red-600">War</span>
       </p>
-    <TypewriterEffectSmooth words={words} />
+    <TypewriterEffectSmooth words={words} className="mb-[570px]"/>
     </WavyBackground>
   );
 }

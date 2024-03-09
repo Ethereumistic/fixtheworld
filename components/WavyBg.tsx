@@ -14,7 +14,7 @@ export function WavyBg() {
     },
     {
       text: "₿itcoin",
-      className: "text-borange dark:text-borange text-xl"
+      className: "text-borange dark:text-borange text-xl "
     },
     {
       text: "Basics",
@@ -52,14 +52,14 @@ export function WavyBg() {
     },
   ]
   return (
-    <WavyBackground className="max-w-4xl mx-auto pb-40">
-      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center">
-        Bitcoin 
+    <WavyBackground className="max-w-4xl mx-auto">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center pb-1">
+      ₿itcoin 
       </p>
       {/* <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
       Level 1: Bitcoin Basics - Understand the core concept of Bitcoin in simple terms.
       </p> */}
-      <TypewriterEffectSmooth words={words} />
+      <TypewriterEffectSmooth words={words} className="mb-[762px]"/>
     </WavyBackground>
   );
 }

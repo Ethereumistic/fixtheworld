@@ -3,6 +3,44 @@
 @tailwind utilities;
  
 @layer base {
+
+  body {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: 2rem 2rem; 
+    overflow-x: hidden;
+  
+    /* background-image: linear-gradient(to right, #f7931a 1px, transparent 1px),
+    linear-gradient(to bottom, #f7931a 1px, transparent 1px);  
+
+    @media (prefers-color-scheme: dark) {
+      background-image: linear-gradient(to right, #fff 1px, transparent 1px),
+      linear-gradient(to bottom, #fff 1px, transparent 1px); */
+  }
+  
+  /* @media (prefers-color-scheme: dark) {
+    body {
+      background-image: linear-gradient(to right, #fff 1px, transparent 1px),
+      linear-gradient(to bottom, #fff 1px, transparent 1px);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    body {
+      background-image: linear-gradient(to right, #4d4d4d 1px, transparent 1px),
+      linear-gradient(to bottom, #4d4d4d 1px, transparent 1px);
+    }
+  } */
+
+  
+
+  /* Add your grid background styling here */
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -33,6 +71,11 @@
     --ring: 222.2 84% 4.9%;
  
     --radius: 0.5rem;
+
+    background-size: 2rem 2rem; 
+
+    background-image: linear-gradient(to right, #B3B3B3  1px, transparent 1px),
+    linear-gradient(to bottom, #B3B3B3  1px, transparent 1px);
   }
  
   .dark {
@@ -63,14 +106,9 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-  }
-}
- 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+    background-image: linear-gradient(to right, #414141 1px, transparent 1px),
+      linear-gradient(to bottom, #414141 1px, transparent 1px);
+      background-size: 2rem 2rem; 
+
   }
 }

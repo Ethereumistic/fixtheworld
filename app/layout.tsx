@@ -23,10 +23,12 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+
       <div className="">
       <TestNavbar />
       </div>
       <body className={inter.className}>{children}</body>
+      
       </ThemeProvider>
     </html>
   );

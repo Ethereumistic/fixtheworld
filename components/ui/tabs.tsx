@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { useState } from 'react';
 
 type Tab = {
   title: string;
@@ -16,15 +16,21 @@ export const Tabs = ({
   activeTabClassName,
   tabClassName,
   contentClassName,
+  onTabChange,
+
 }: {
   tabs: Tab[];
   containerClassName?: string;
   activeTabClassName?: string;
   tabClassName?: string;
   contentClassName?: string;
+  onTabChange?: (value: string) => void;
+
 }) => {
+  
   const [active, setActive] = useState<Tab>(propTabs[0]);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
+  const [hovering, setHovering] = useState(false);
 
   const moveSelectedTabToTop = (idx: number) => {
     const newTabs = [...propTabs];
@@ -34,13 +40,17 @@ export const Tabs = ({
     setActive(newTabs[0]);
   };
 
-  const [hovering, setHovering] = useState(false);
+  const handleTabClick = (tab: Tab) => {
+    moveSelectedTabToTop(propTabs.indexOf(tab)); // Use indexOf to get index
+    onTabChange?.(tab.value); // Call onTabChange if provided
+  };
+  
 
   return (
     <>
       <div
         className={cn(
-          "flex flex-col items-center justify-start fixed overflow-auto sm:overflow-visible no-visible-scrollbar px-[41px] py-[10px] mt-32 border border-borange mx-4 -translate-x-[362px]",
+          "flex flex-col items-center justify-start fixed overflow-auto sm:overflow-visible no-visible-scrollbar px-[41px] py-[9.5px] mt-32 border border-borange mx-4 -translate-x-[360px] ",
           containerClassName
         )}
       >
@@ -49,6 +59,7 @@ export const Tabs = ({
             key={tab.title}
             onClick={() => {
               moveSelectedTabToTop(idx);
+              handleTabClick(tab);
             }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}

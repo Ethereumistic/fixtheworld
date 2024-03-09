@@ -42,7 +42,7 @@ const words = [
     text: "to",
   },
   {
-    text: "Bitcoin",
+    text: "₿itcoin",
     className: "text-borange dark:text-borange"
   },
   {
@@ -54,13 +54,13 @@ const words = [
 export function WavyBg3() {
   return (
     <WavyBackground className=" mx-auto pb-40">
-      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center">
-        Bitcoin <span className="text-black dark:text-white">vs</span> <span className="text-deth dark:text-eth">ALTs</span>
+      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center pb-2">
+      ₿itcoin <span className="text-black dark:text-white">vs</span> <span className="text-deth dark:text-eth">ALTs</span>
       </p>
       {/* <p className="text-base md:text-lg mt-4 text-black dark:text-white font-normal inter-var text-center">
       Level 1: Bitcoin Basics - Understand the core concept of Bitcoin in simple terms.
       </p> */}
-      <TypewriterEffectSmooth words={words} />
+      <TypewriterEffectSmooth words={words} className="mb-[412px]"/>
 
     </WavyBackground>
   );

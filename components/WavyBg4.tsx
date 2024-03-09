@@ -52,11 +52,11 @@ const words = [
 
 export function WavyBg4() {
   return (
-    <WavyBackground className="max-w-4xl mx-auto pb-40">
-      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center">
-        Bitcoin <span className="text-black dark:text-white">vs</span> <span className="text-tblue">CBDCs</span>
+    <WavyBackground className="max-w-4xl mx-auto ">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-borange font-bold inter-var text-center pb-2">
+      ₿itcoin <span className="text-black dark:text-white">vs</span> <span className="text-tblue">CBDCs</span>
       </p>
-      <TypewriterEffectSmooth words={words} />
+      <TypewriterEffectSmooth words={words}  className="mb-[590px]"/>
     </WavyBackground>
   );
 }
