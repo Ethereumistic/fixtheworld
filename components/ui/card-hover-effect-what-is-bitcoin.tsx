@@ -18,14 +18,11 @@ interface ProjectItem {
   title: string;
   description: string;
   link: string;
-
+  borderColor?: string; // Make them optional if not all projects need styles
+  bgColor?: string;
+  titleColor?: string;
+  iconColor?: string;
   icons: string;
-  
-  borderColor: string;
-  bgColor: string; 
-  titleColor: string;
-
-  iconColor: string;
 }
 
 const icons = [FaExchangeAlt, GiGoldBar, IoLogoBitcoin, FaRegMoneyBill1, FaEthereum, SiWebmoney , GiPistolGun, ImHourGlass, IoGameControllerOutline];
