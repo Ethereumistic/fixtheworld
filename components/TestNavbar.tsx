@@ -13,6 +13,7 @@ import { useTheme } from "next-themes"
 import { MdLightMode, MdNightlight } from "react-icons/md";
 import Link from "next/link";
 import { TextGenerateEffectDemo } from "./TextGenerateEffectDemo";
+import { FaHome } from "react-icons/fa";
 
 export function TestNavbar() {
 
@@ -81,6 +82,13 @@ function Navbar({ className }: { className?: string }) {
 
 <div className="h-[4rem] w-full bg-black dark:bg-white  bg-grid-white/[0.2] dark:bg-grid-black/[0.2] relative flex items-center justify-center ">
 <Menu setActive={setActive} >
+
+      <Link href="/">
+        <div className="left-0 fixed flex space-x-1 translate-x-[35px] translate-y-5">
+          <FaHome className="text-transparent dark:text-borange hover:scale-150 transition-all duration-500"/>
+        </div>
+      </Link>
+
       <Link href="/what-is-bitcoin" className="translate-y-4 w-48 translate-x-20">{<TextGenerateEffectDemo />}
         <div className="-translate-y-[34px] -translate-x-[70px] "><MenuItem setActive={setActive} active={active} item={"What is"} >
           <div className="flex flex-col space-y-4 text-sm ">
@@ -97,17 +105,17 @@ function Navbar({ className }: { className?: string }) {
 
       
       <div className="translate-y-4">
-        <MenuItem setActive={setActive} active={active} item="Products">
+        <MenuItem setActive={setActive} active={active} item="Charts">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4 dark:text-white text-black">
             <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
+              title="Bitcoin"
+              href="/charts/bitcoin"
               src="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/53-turgovishte.png"
               description="Prepare for tech interviews like never before."
             />
             <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
+              title="Ethereum"
+              href="/charts/ethereum"
               src="https://cdn.jsdelivr.net/gh/Ethereumistic/obshtini/partners/53-turgovishte.png"
               description="Production ready Tailwind css components for your next project"
             />
